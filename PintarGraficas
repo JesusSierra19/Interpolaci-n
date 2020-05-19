@@ -1,0 +1,22 @@
+package interpolacion;
+
+
+import interpolacion.Graficar;
+import java.util.ArrayList;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class PintarGraficas extends JFrame{
+
+    public PintarGraficas(String funcion,String titulo,ArrayList<Double> x,ArrayList<Double> y) {
+        
+        Graficar gra=new Graficar(titulo);
+         gra.agregarGraficasF(funcion, x, y);
+         JPanel panel=gra.ObtenerPanelF();
+         this.setSize(500,500);
+         this.add(panel);
+         panel.setVisible(true);
+         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    }
+    
+}
