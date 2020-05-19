@@ -1,0 +1,21 @@
+package interpolacion;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class Pintarvavv extends JFrame{
+
+    public Pintarvavv(String titulo,double x,double va,double vv) {
+        
+        Graficar gra=new Graficar(titulo);
+         gra.agregarGraficasvavv( x, va, vv);
+         JPanel panel=gra.ObtenerPanelvavv();
+         this.setSize(500,500);
+         this.add(panel);
+         panel.setVisible(true);
+         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
+    }
+    
+}
